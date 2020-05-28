@@ -4,15 +4,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="National Aeronautics and Space Administration">
+    <meta name="description" content="Get in touch with with National Aeronautics and Space Administration">
     <meta name="keywords" content="Contact, nasa, form, phone, number, space, iss, station, solar, system ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Eswaran Arulkumar">
-    <title>National Aeronautics and Space Administration - Contact</title>
+    <title>Contact National Aeronautics and Space Administration</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
-    <!-- This script load script for contact -->
-    <script src="script/contact.js"></script>
+
 </head>
 
 <body>
@@ -28,7 +27,7 @@
                 <label for="nav-check"> <span></span> <span></span> <span></span> </label>
             </div>
             <input type="checkbox" id="nav-check">
-            <nav class="nav-links"> <a href="index.html" title="Home">HOME</a> <a href="about.html" title="About">ABOUT</a> <a href="asteroids.html" title="asteroids">ASTEROIDS</a> <a href="our_planets.html" title="Our planets">OUR PLANETS</a> <a href="contact.html" title="Contact">CONTACT</a> </nav>
+            <nav class="nav-links"> <a href="index.html" title="Home">HOME</a> <a href="about.html" title="About">ABOUT</a> <a href="asteroids.html" title="Asteroids">ASTEROIDS</a> <a href="our_planets.html" title="Our planets">OUR PLANETS</a> <a href="contact.html" title="Contact" class="activenavbtn">CONTACT</a> </nav>
         </div>
     </div>
     <!-- Header -->
@@ -38,8 +37,7 @@
         </div>
     </div>
     <!-- Starting of main content -->
-    <p id="yo"><p>
-    <main class="wrapper">
+      <main class="wrapper">
 
         <section class="columns">
 
@@ -52,34 +50,36 @@
                           </div>
 
             <div class="column">
-              <form name="contactForm"  onsubmit="return validateFName() ">
+              <span class="sent" style="display:none" id="submsg">Your message is sent!</span>
+
+              <form name="contactForm" id="contactForm" onsubmit="return validateFName() ">
      <div class="row">
         <div>
-            <input type="text" name="firstName" id="firstName" placeholder="Firstname">
+            <input type="text" name="firstName" title="Firstname" id="firstName" placeholder="Firstname">
             <span class="error" style="display:none" id="firstNameError">Pleas enter your firstname</span>
         </div>
         <div>
           <br>
-            <input type="text" name="lastName" id="lastName" placeholder="Lastname">
+            <input type="text" name="lastName" title="Lastname" id="lastName" placeholder="Lastname">
             <span class="error" style="display:none" id="lastNameError">Pleas enter your lastname</span>
         </div>
         <div>
             <br>
-            <input type="text" name="phone" placeholder="Telephone (202-555-0103)" id="phone">
+            <input type="text" name="phone" title="Telephone" placeholder="Telephone (123-456-7890)" id="phone">
             <span class="error" style="display:none" id="phoneError">Please enter a valid phone number</span>
         </div>
         <div>
             <br>
-            <input type="text" name="email" id="email" placeholder="Email">
+            <input type="text" name="email" title="Email" id="email" placeholder="Email">
             <span class="error" style="display:none" id="emailError">Please enter a correct email address</span>
         </div>
         <div>
             <br>
-            <textarea id="msg" name="subject" placeholder="Message" style="height:200px"></textarea>
+            <textarea id="msg" name="subject" title="Message" placeholder="Message" style="height:200px"></textarea>
             <span class="error" style="display:none" id="msgError">Pleas enter your message</span>
         </div>
         <div>
-            <button type="submit" id="submitContact" class="readmorebutton">Send</button>
+            <button type="submit" title="Submit" id="submit" class="readmorebutton">Submit</button>
         </div>
     </div>
     </form>
@@ -151,6 +151,8 @@
         </a>
       </div>
     </footer>
+    <!-- This script load script for contact -->
+    <script src="script/contact.js"></script>
 </body>
 
 </html>

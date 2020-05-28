@@ -6,7 +6,7 @@
 	background-color: #ffffff;
 	margin: auto;
 	position: fixed;
-	/* Set the navbar to fixed position */
+
 	top: 0;
 	/* Position the navbar at the top of the page */
 }
@@ -28,6 +28,7 @@
 
 .nav>.nav-header>.nav-title {
 	display: inline-block;
+	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 20px;
 	color: #fff;
 	padding: 10px 10px 10px 10px;
@@ -41,6 +42,7 @@
 .nav>.nav-links {
 	display: inline;
 	float: right;
+	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 20px;
 	margin-right: 0%
 }
@@ -58,9 +60,10 @@
 	font-weight: bold;
 }
 
-.nav>.nav-links>a:active {
+.activenavbtn {
+	color: #ffffff !important;
 	background-color: #1c4462;
-	color: #b8dfe4;
+	font-family: 'Roboto Condensed', sans-serif;
 	font-weight: bold;
 }
 
@@ -68,8 +71,7 @@
 	display: none;
 }
 
-
-/* NAVIGATION */
+/* END NAVIGATION */
 
 
 /* BODY ETC */
@@ -101,8 +103,8 @@
 	text-align: center;
 }
 
-.frontheader_small {
-	background-image: url("../images/iss.jpg");
+.about_header {
+	background-image: url("../images/about_header.jpg");
 	color: #395885;
 	height: 150px;
 	font-size: 24px;
@@ -116,6 +118,19 @@
 
 .our_planets_header {
 	background-image: url("../images/our_planets_header.jpg");
+	color: #395885;
+	height: 150px;
+	font-size: 24px;
+	width: 100%;
+	margin-top: 110px;
+	margin-bottom: 10px;
+	margin-right: 0px;
+	margin-left: 0px;
+	text-align: center;
+}
+
+.blackhole_header {
+	background-image: url("../images/blackhole_header.jpg");
 	color: #395885;
 	height: 150px;
 	font-size: 24px;
@@ -202,7 +217,7 @@
 
 body {
 	margin: 0;
-	font-family: 'segoe ui';
+		font-family: 'Roboto Condensed', sans-serif;
 	background-size: cover;
 	font-size: 1.1em;
 	line-height: 1.5;
@@ -527,18 +542,30 @@ a:hover {
 	text-decoration: underline;
 }
 
-span {
+.error {
 	color: red;
-	font-size: 14px;
+	font-size: 16px;
 }
+
+.sent {
+	color: red;
+	font-size: 18px;
+	font-weight: bolder;
+}
+
 
 
 /* END BODY ETC */
 
 /* FORM */
 
+
 * {
 	box-sizing: border-box;
+}
+
+#submitMessage {
+    display: none;
 }
 
 input[type=text],
@@ -624,7 +651,7 @@ input[type=submit]:hover {
 /* FOR MOBILE */
 
 @media (max-width:1050px) {
-	.nav>.nav-btn {
+		.nav>.nav-btn {
 		display: inline-block;
 		position: absolute;
 		right: 0px;
@@ -637,6 +664,7 @@ input[type=submit]:hover {
 	}
 	.nav>.nav-header>.nav-title {
 		display: inline-block;
+		font-family: 'Roboto Condensed', sans-serif;
 		font-size: 22px;
 		color: #ffffff;
 		padding: 10px 10px 10px 10px;
@@ -704,6 +732,116 @@ input[type=submit]:hover {
 		break-before: always;
 		margin: 0 0 5px;
 		0;
+	}
+	h1 {
+		font-size: 30px !important;
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #1c4462;
+margin: 0px;
+	}
+
+	h2 {
+		font-size: 18px !important;
+		line-height: normal;
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #1c4462;
+	}
+
+	h3 {
+		font-size: 16px !important;
+		line-height: normal;
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #1c4462;
+	}
+	
+.about_header {
+		background-image: url("../images/about_header.jpg");
+		color: #395885;
+		height: 70px;
+		font-size: 24px;
+		width: 100%;
+		margin-top: 110px;
+		margin-bottom: 10px;
+		margin-right: 0px;
+		margin-left: 0px;
+		text-align: center;
+	}
+
+	.our_planets_header {
+		background-image: url("../images/our_planets_header.jpg");
+		color: #395885;
+		height: 70px;
+		font-size: 24px;
+		width: 100%;
+		margin-top: 110px;
+		margin-bottom: 10px;
+		margin-right: 0px;
+		margin-left: 0px;
+		text-align: center;
+	}
+
+	.blackhole_header {
+		background-image: url("../images/blackhole_header.jpg");
+		color: #395885;
+		height: 70px;
+		font-size: 24px;
+		width: 100%;
+		margin-top: 110px;
+		margin-bottom: 10px;
+		margin-right: 0px;
+		margin-left: 0px;
+		text-align: center;
+	}
+
+	.asteroids_header {
+		background-image: url("../images/asteroids_header.jpg");
+		color: #395885;
+		height: 70px;
+		font-size: 24px;
+		width: 100%;
+		margin-top: 110px;
+		margin-bottom: 10px;
+		margin-right: 0px;
+		margin-left: 0px;
+		text-align: center;
+	}
+
+	.contact_header {
+		background-image: url("../images/contact_header.jpg");
+		color: #395885;
+		height: 70px;
+		font-size: 24px;
+		width: 100%;
+		margin-top: 110px;
+		margin-bottom: 10px;
+		margin-right: 0px;
+		margin-left: 0px;
+		text-align: center;
+	}
+	.moon_header {
+		background-image: url("../images/moon_header.jpg");
+		color: #395885;
+		height: 70px;
+		font-size: 24px;
+		width: 100%;
+		margin-top: 110px;
+		margin-bottom: 10px;
+		margin-right: 0px;
+		margin-left: 0px;
+		text-align: center;
+	}
+
+	.galaxy_header {
+		background-image: url("../images/galaxy_header.jpg");
+		color: #395885;
+		height: 70px;
+		font-size: 24px;
+		width: 100%;
+		margin-top: 110px;
+		margin-bottom: 10px;
+		margin-right: 0px;
+		margin-left: 0px;
+		text-align: center;
 	}
 }
 

@@ -43,10 +43,19 @@ function validateFName() {
     }
 
     if (lnameVal && fnameVal && msgVal && phoneVal && emailVal) {
-        alert("Your message is sent!");
+      submsg.style.display = "block";
+      document.getElementById("contactForm").reset();
+      event.preventDefault();
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+
+        //alert("Your message is sent!");
 
     } else {
-        console.log("Message not sent");
+        //console.log("Message not sent");
         return false;
 
     }

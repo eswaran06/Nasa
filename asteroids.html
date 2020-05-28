@@ -4,15 +4,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="National Aeronautics and Space Administration">
+    <meta name="description" content="Overview of objects that are close to earth">
     <meta name="keywords" content="space, Science, astronomy, cosmology, technology, innovation, international, space, station">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Eswaran Arulkumar">
-    <title>NASA - National Aeronautics and Space Administration</title>
+    <title>Asteroids near earth today</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
     <!-- This script load asterids -->
-    <script src="script/asteroids.js"></script>
+
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                 <label for="nav-check"> <span></span> <span></span> <span></span> </label>
             </div>
             <input type="checkbox" id="nav-check">
-            <nav class="nav-links"> <a href="index.html" title="Home">HOME</a> <a href="about.html" title="About">ABOUT</a> <a href="asteroids.html" title="asteroids">ASTEROIDS</a> <a href="our_planets.html" title="Our planets">OUR PLANETS</a> <a href="contact.html" title="Contact">CONTACT</a> </nav>
+            <nav class="nav-links"> <a href="index.html" title="Home">HOME</a> <a href="about.html" title="About">ABOUT</a> <a href="asteroids.html" title="asteroids" class="activenavbtn">ASTEROIDS</a> <a href="our_planets.html" title="Our planets">OUR PLANETS</a> <a href="contact.html" title="Contact">CONTACT</a> </nav>
         </div>
     </div>
     <!-- Header -->
@@ -39,9 +39,9 @@
     </div>
     <!-- Output from api -->
     <main class="wrapper">
-      <h2>Today there are <span class="asteroidspan"id="objectstoday"></span> objects near earth today</h2>
-        <section class="columns" id="asteroids">
-        </section>
+      <h2 title="Number of found objects today">Today there are <span class="asteroidspan"id="objectstoday"></span> objects near earth today</h2>
+        <div class="columns" id="asteroids"><div id="loader">Loading, pleas wait...</div></div>
+
     </main>
     <!-- Starting of footer -->
     <footer>
@@ -107,6 +107,7 @@
         </a>
       </div>
     </footer>
+    <script src="script/asteroids.js"></script>
 </body>
 
 </html>
